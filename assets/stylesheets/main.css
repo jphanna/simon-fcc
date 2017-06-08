@@ -1,0 +1,169 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  background: #7d7e7d;
+  background: linear-gradient(135deg, #7d7e7d 0%,#0e0e0e 100%);
+  font-family: 'Orbitron', sans-serif;
+  margin: 20px auto;
+  padding: 10px;
+  width: 300px;
+}
+
+.button {
+  border-radius: 5px;
+  display: inline-block;
+  height: 80px;
+  width: 100%;
+}
+
+#b1 {
+  background: #fdd835;
+  margin-bottom: 5px;
+}
+#b2 {
+  background: #e53935;
+  margin-bottom: 5px;
+}
+#b3 {
+  background: #43a047;
+  margin-bottom: 5px;
+}
+#b4 {
+  background: #1e88e5;
+  margin-bottom: 5px;
+}
+
+.control {
+  background: #f6f8f9;
+  background: linear-gradient(135deg, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  border: 5px solid #333;
+  text-align: center;
+  width: 100%;
+}
+
+.control > div {
+  margin: 15px auto;
+}
+
+#count {
+  font-size: 24px;
+  text-shadow: 2px 2px 3px #000;
+}
+
+button {
+  background: #333;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #000;
+  color: #fff;
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 5px;
+  text-transform: uppercase;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 22px;
+}
+
+small {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 350px) {
+  .app {
+    border-radius: 50%;
+    height: 322px;
+    width: 322px;
+  }
+
+  .button {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+  }
+
+  #b1 {
+    border-radius: 100% 5px 0 5px;
+    margin: 0 1px 0 0;
+  }
+  #b2 {
+    border-radius: 5px 100% 5px 0;
+    margin: 0 0 0 1px;
+  }
+  #b3 {
+    border-radius: 5px 0 5px 100%;
+    margin: 0 1px 0 0;
+  }
+  #b4 {
+    border-radius: 0 5px 100% 5px;
+    margin: 0 0 0 1px;
+  }
+
+  .control {
+    border: 10px solid #333;
+    border-radius: 50%;
+    height: 150px;
+    left: 75px;
+    position: relative;
+    top: -230px;
+    width: 150px;
+  }
+
+  .controlButtons > div {
+    display: inline-block;
+  }
+}

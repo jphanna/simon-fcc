@@ -2,16 +2,33 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon game for freeCodeCamp</title>
-    <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="assets/stylesheets/main.css">
   </head>
 
   <body>
+    <div class="app"><!--
+    --><div class="pad"><!--
+    --><div id="b1" class="button"></div><!--
+    --><div id="b2" class="button"></div><!--
+    --><div id="b3" class="button"></div><!--
+    --><div id="b4" class="button"></div><!--
+  --></div>
+      <div class="control">
+        <div id="count">00</div>
+        <div class="controlButtons">
+          <div><button id="startButton">Start</button></div>
+          <div><button id="strictButton">Strict</button></div>
+        </div>
+        <div class="logo">Simon<small>&reg;</small></div>
+      </div>
+    </div>
 
+    <!-- AUDIO FOR BUTTONS -->
 
     <script src="assets/scripts/jquery-3.2.1.js"></script>
-    <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/script.js"></script>
   </body>
 </html>
