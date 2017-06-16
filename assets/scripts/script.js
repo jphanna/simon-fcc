@@ -27,7 +27,7 @@ buttons.addEventListener("click", function(event) {
       event.target.id === "b3" ||
       event.target.id === "b4") {
         playersTurn(event);
-      }
+  }
 });
 
 /* Simon chooses next number to add to sequence and runs the round*/
