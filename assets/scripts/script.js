@@ -1,5 +1,5 @@
 var sequence = []; // array to hold sequence
-var playerSequence = 20; // Count position in sequence player is testing
+var playerSequence = 0; // Count position in sequence player is testing
 var playerGo = false; // Player's turn?
 var computerGo = true; // Computer's turn?
 var round = 0; // counter on display
