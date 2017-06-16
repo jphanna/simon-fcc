@@ -104,7 +104,6 @@ function testSeq(number) {
           youWin.style.display = "initial";
           playerGo = false;
           computerGo = true;
-          console.log("YOU WIN!");
           setTimeout(function() {youWin.style.display = "none"; start();}, 2000);
         } else {
           playerSequence = 0;
