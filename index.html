@@ -11,22 +11,40 @@
   <body>
     <div class="app"><!--
     --><div class="pad"><!--
-    --><div id="b1" class="button"></div><!--
-    --><div id="b2" class="button"></div><!--
-    --><div id="b3" class="button"></div><!--
-    --><div id="b4" class="button"></div><!--
+    --><div id="b1" class="button off" data-number="1"></div><!--
+    --><div id="b2" class="button off" data-number="2"></div><!--
+    --><div id="b3" class="button off" data-number="3"></div><!--
+    --><div id="b4" class="button off" data-number="4"></div><!--
   --></div>
       <div class="control">
-        <div id="count">00</div>
+        <div id="round">00</div>
         <div class="controlButtons">
           <div><button id="startButton">Start</button></div>
           <div><button id="strictButton">Strict</button></div>
         </div>
         <div class="logo">Simon<small>&reg;</small></div>
       </div>
+      <div class="message">
+        <div id="strictError">Error, Press Start Again</div>
+        <div id="tryAgain">Watch Me and Try Again</div>
+        <div id="yourTurn">Your Turn</div>
+        <div id="youWin">YOU WIN!!!</div>
+      </div>
     </div>
 
     <!-- AUDIO FOR BUTTONS -->
+    <audio id="tone1">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="tone2">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="tone3">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="tone4">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="assets/scripts/jquery-3.2.1.js"></script>
     <script src="assets/scripts/script.js"></script>

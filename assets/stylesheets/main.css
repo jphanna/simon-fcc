@@ -52,10 +52,13 @@ table {
   box-sizing: border-box;
 }
 
+body {
+  background: #F0C27B;
+}
+
 .app {
-  background: #7d7e7d;
-  background: linear-gradient(135deg, #7d7e7d 0%,#0e0e0e 100%);
-  font-family: 'Orbitron', sans-serif;
+  background: #2c3e50;
+	font-family: 'Orbitron', sans-serif;
   margin: 20px auto;
   padding: 10px;
   width: 300px;
@@ -65,58 +68,75 @@ table {
   border-radius: 5px;
   display: inline-block;
   height: 80px;
+	margin-bottom: 5px;
   width: 100%;
 }
 
-#b1 {
+#b1.off {
   background: #fdd835;
-  margin-bottom: 5px;
 }
-#b2 {
-  background: #e53935;
-  margin-bottom: 5px;
+#b1.on {
+	background: #fff59d;
 }
-#b3 {
-  background: #43a047;
-  margin-bottom: 5px;
+#b2.off {
+  background: #b71c1c;
 }
-#b4 {
-  background: #1e88e5;
-  margin-bottom: 5px;
+#b2.on {
+	background: #e53935;
+}
+#b3.off {
+  background: #388e3c;
+}
+#b3.on {
+	background: #81c784;
+}
+#b4.off {
+  background: #0d47a1;
+}
+#b4.on {
+	background: #1e88e5;
 }
 
 .control {
-  background: #f6f8f9;
-  background: linear-gradient(135deg, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
-  border: 5px solid #333;
+  background: #ecf0f1;
+  border: 5px solid #2c3e50;;
   text-align: center;
   width: 100%;
 }
 
 .control > div {
-  margin: 15px auto;
+  margin: 12px auto;
 }
 
-#count {
-  font-size: 24px;
-  text-shadow: 2px 2px 3px #000;
+#round {
+  font-family: monospace;
+  font-size: 28px;
 }
 
 button {
-  background: #333;
+  background: #2c3e50;
   border: 1px solid #fff;
   border-radius: 5px;
-  box-shadow: 2px 2px 3px #000;
   color: #fff;
   display: inline-block;
   font-size: 11px;
   padding: 2px 5px;
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .logo {
   font-weight: 900;
   font-size: 22px;
+}
+
+.message {
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+.message > div {
+	display: none;
 }
 
 small {
@@ -126,6 +146,7 @@ small {
 @media only screen and (min-width: 350px) {
   .app {
     border-radius: 50%;
+    box-shadow: 5px 5px 15px #000;
     height: 322px;
     width: 322px;
   }
@@ -136,22 +157,38 @@ small {
     width: 150px;
   }
 
-  #b1 {
+  #b1.off {
     border-radius: 100% 5px 0 5px;
     margin: 0 1px 0 0;
   }
-  #b2 {
+	#b1.on {
+		border-radius: 100% 5px 0 5px;
+    margin: 0 1px 0 0;
+	}
+  #b2.off {
     border-radius: 5px 100% 5px 0;
     margin: 0 0 0 1px;
   }
-  #b3 {
+	#b2.on {
+		border-radius: 5px 100% 5px 0;
+    margin: 0 0 0 1px;
+	}
+  #b3.off {
     border-radius: 5px 0 5px 100%;
     margin: 0 1px 0 0;
   }
-  #b4 {
+	#b3.on {
+		border-radius: 5px 0 5px 100%;
+    margin: 0 1px 0 0;
+	}
+  #b4.off {
     border-radius: 0 5px 100% 5px;
     margin: 0 0 0 1px;
   }
+	#b4.on {
+		border-radius: 0 5px 100% 5px;
+    margin: 0 0 0 1px;
+	}
 
   .control {
     border: 10px solid #333;
@@ -166,4 +203,9 @@ small {
   .controlButtons > div {
     display: inline-block;
   }
+
+	.message {
+		color: #333;
+		transform: translateY(-120px);
+	}
 }
