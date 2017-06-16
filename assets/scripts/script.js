@@ -52,7 +52,7 @@ function activate(sequence) {
       clearInterval(timing);
       computerGo = false;
       playerGo = true;
-      yourTurn.style.display = "initial";
+      setTimeout(function() {yourTurn.style.display = "initial"}, 700);
     }
   }, 700);
 }
