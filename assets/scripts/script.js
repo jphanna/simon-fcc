@@ -13,7 +13,7 @@ var yourTurn = document.getElementById("yourTurn");
 var tryAgain = document.getElementById("tryAgain");
 var strictError = document.getElementById("strictError");
 startButton.addEventListener("click", start);
-strictButton.addEventListener("click", function() {
+strictButton.addEventListener("click", () => {
   strict = !strict;
   if (strict) {
     strictButton.style.background = "#b71c1c";
@@ -21,7 +21,7 @@ strictButton.addEventListener("click", function() {
     strictButton.style.background = "#2c3e50";
   }
 });
-buttons.addEventListener("click", function(event) {
+buttons.addEventListener("click", (event) => {
   if (event.target.id === "b1" ||
       event.target.id === "b2" ||
       event.target.id === "b3" ||
@@ -45,14 +45,14 @@ function addZero(num) {
 /* Simon show sequence */
 function activate(sequence) {
   var i = 0;
-  var timing = setInterval(function() {
+  var timing = setInterval(() => {
     lightButton(sequence[i]);
     i++;
     if (i >= sequence.length) {
       clearInterval(timing);
       computerGo = false;
       playerGo = true;
-      setTimeout(function() {yourTurn.style.display = "initial"}, 700);
+      setTimeout(() => {yourTurn.style.display = "initial"}, 700);
     }
   }, 700);
 }
@@ -63,7 +63,7 @@ function lightButton(number) {
   sound.play();
   button.classList.remove("off");
   button.classList.add("on");
-  setTimeout(function() {
+  setTimeout(() => {
     button.classList.remove("on");
     button.classList.add("off");
   }, 350);
@@ -87,7 +87,7 @@ function bleep(e) {
     e.target.classList.remove("off");
     e.target.classList.add("on");
     testSeq(number);
-    setTimeout(function() {
+    setTimeout(() => {
       e.target.classList.remove("on");
       e.target.classList.add("off");
       buttons.addEventListener("click", bleep);
@@ -104,7 +104,7 @@ function testSeq(number) {
           youWin.style.display = "initial";
           playerGo = false;
           computerGo = true;
-          setTimeout(function() {youWin.style.display = "none"; start();}, 2000);
+          setTimeout(() => {youWin.style.display = "none"; start();}, 2000);
         } else {
           playerSequence = 0;
           playerGo = false;
@@ -123,7 +123,7 @@ function testSeq(number) {
       playerGo = false;
       computerGo = true;
       playerSequence = 0;
-      setTimeout(function() {tryAgain.style.display = "none"; activate(sequence)}, 2000);
+      setTimeout(() => {tryAgain.style.display = "none"; activate(sequence)}, 2000);
     }
   }
 }
