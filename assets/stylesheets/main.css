@@ -135,7 +135,7 @@ button {
 	text-align: center;
 }
 
-.message > div {
+.message > p {
 	display: none;
 }
 
