@@ -21,7 +21,7 @@ strictButton.addEventListener("click", () => {
     strictButton.style.background = "#2c3e50";
   }
 });
-buttons.addEventListener("click", (event) => {
+buttons.addEventListener("click", function(event) {
   if (event.target.id === "b1" ||
       event.target.id === "b2" ||
       event.target.id === "b3" ||
