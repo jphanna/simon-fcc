@@ -12,7 +12,9 @@ var youWin = document.getElementById("youWin");
 var yourTurn = document.getElementById("yourTurn");
 var tryAgain = document.getElementById("tryAgain");
 var strictError = document.getElementById("strictError");
+
 startButton.addEventListener("click", start);
+
 strictButton.addEventListener("click", () => {
   strict = !strict;
   if (strict) {
@@ -21,20 +23,14 @@ strictButton.addEventListener("click", () => {
     strictButton.style.background = "#2c3e50";
   }
 });
-buttons.addEventListener("click", (event) => {
-  if (event.target.id === "b1" ||
-      event.target.id === "b2" ||
-      event.target.id === "b3" ||
-      event.target.id === "b4") {
-        playersTurn(event);
-  }
-});
+
+buttons.addEventListener("click", playersTurn);
 
 /* Simon chooses next number to add to sequence and runs the round*/
 function getSimon() {
   round++;
   roundDisplay.innerText = addZero(round);
-  sequence.push(Math.floor(Math.random() * (5 - 1)) + 1);
+  sequence.push(Math.floor(Math.random() * 4) + 1);
   activate(sequence);
 }
 
@@ -70,27 +66,31 @@ function lightButton(number) {
 }
 
 function playersTurn(event) {
-  if (playerGo === true) {
-    var playerButton = event;
-    bleep(playerButton);
+  if (playerGo) {
+    if (event.target.id === "b1" ||
+        event.target.id === "b2" ||
+        event.target.id === "b3" ||
+        event.target.id === "b4") {
+          bleep(event);
+    }
   }
 }
 
 /* Player button activation */
 function bleep(e) {
-  if (playerGo === true) {
+  if (playerGo) {
     var number = Number(e.target.dataset.number);
     var sound = document.getElementById("tone" + number);
     sound.currentTime = 0;
     sound.play();
-    buttons.removeEventListener("click", bleep);
+    buttons.removeEventListener("click", playersTurn);
     e.target.classList.remove("off");
     e.target.classList.add("on");
     testSeq(number);
     setTimeout(() => {
       e.target.classList.remove("on");
       e.target.classList.add("off");
-      buttons.addEventListener("click", bleep);
+      buttons.addEventListener("click", playersTurn);
     }, 350);
   }
 }
@@ -101,6 +101,7 @@ function testSeq(number) {
       playerSequence++;
       if (playerSequence === sequence.length) {
         if (playerSequence === 20) {
+          yourTurn.style.display = "none";
           youWin.style.display = "initial";
           playerGo = false;
           computerGo = true;
