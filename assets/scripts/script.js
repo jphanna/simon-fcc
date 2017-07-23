@@ -1,4 +1,5 @@
 (function() {
+    "use strict";
     var sequence = []; // array to hold sequence
     var playerSequence = 0; // Count position in sequence player is testing
     var playerGo = false; // Player's turn?
