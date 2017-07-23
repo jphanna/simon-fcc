@@ -49,7 +49,7 @@
                 clearInterval(timing);
                 computerGo = false;
                 playerGo = true;
-                setTimeout(() => {yourTurn.style.display = "initial"}, 700);
+                setTimeout(() => {yourTurn.style.display = "initial";}, 700);
             }
         }, 700);
     }
@@ -125,7 +125,7 @@
                 playerGo = false;
                 computerGo = true;
                 playerSequence = 0;
-                setTimeout(() => {tryAgain.style.display = "none"; activate(sequence)}, 2000);
+                setTimeout(() => {tryAgain.style.display = "none"; activate(sequence);}, 2000);
             }
         }
     }
