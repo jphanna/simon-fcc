@@ -16,35 +16,40 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Styles go here */
@@ -53,12 +58,12 @@ table {
 }
 
 body {
-  background: #F0C27B;
+  background: #7BB6F0;
 }
 
 .app {
   background: #2c3e50;
-	font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   margin: 20px auto;
   padding: 10px;
   width: 300px;
@@ -68,33 +73,40 @@ body {
   border-radius: 5px;
   display: inline-block;
   height: 80px;
-	margin-bottom: 5px;
+  margin-bottom: 5px;
   width: 100%;
 }
 
 #b1.off {
   background: #fdd835;
 }
+
 #b1.on {
-	background: #fff59d;
+  background: #fff59d;
 }
+
 #b2.off {
   background: #b71c1c;
 }
+
 #b2.on {
-	background: #e53935;
+  background: #e53935;
 }
+
 #b3.off {
   background: #388e3c;
 }
+
 #b3.on {
-	background: #81c784;
+  background: #81c784;
 }
+
 #b4.off {
   background: #0d47a1;
 }
+
 #b4.on {
-	background: #1e88e5;
+  background: #1e88e5;
 }
 
 .control {
@@ -121,7 +133,7 @@ button {
   display: inline-block;
   font-size: 11px;
   padding: 2px 5px;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -130,13 +142,13 @@ button {
 }
 
 .message {
-	color: #fff;
-	font-size: 20px;
-	text-align: center;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
 }
 
 .message > p {
-	display: none;
+  display: none;
 }
 
 small {
@@ -161,34 +173,41 @@ small {
     border-radius: 100% 5px 0 5px;
     margin: 0 1px 0 0;
   }
-	#b1.on {
-		border-radius: 100% 5px 0 5px;
+
+  #b1.on {
+    border-radius: 100% 5px 0 5px;
     margin: 0 1px 0 0;
-	}
+  }
+  
   #b2.off {
     border-radius: 5px 100% 5px 0;
     margin: 0 0 0 1px;
   }
-	#b2.on {
-		border-radius: 5px 100% 5px 0;
+
+  #b2.on {
+    border-radius: 5px 100% 5px 0;
     margin: 0 0 0 1px;
-	}
+  }
+  
   #b3.off {
     border-radius: 5px 0 5px 100%;
     margin: 0 1px 0 0;
   }
-	#b3.on {
-		border-radius: 5px 0 5px 100%;
+
+  #b3.on {
+    border-radius: 5px 0 5px 100%;
     margin: 0 1px 0 0;
-	}
+  }
+  
   #b4.off {
     border-radius: 0 5px 100% 5px;
     margin: 0 0 0 1px;
   }
-	#b4.on {
-		border-radius: 0 5px 100% 5px;
+
+  #b4.on {
+    border-radius: 0 5px 100% 5px;
     margin: 0 0 0 1px;
-	}
+  }
 
   .control {
     border: 10px solid #333;
@@ -204,8 +223,8 @@ small {
     display: inline-block;
   }
 
-	.message {
-		color: #333;
-		transform: translateY(-120px);
-	}
+  .message {
+    color: #333;
+    transform: translateY(-120px);
+  }
 }
