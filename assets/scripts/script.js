@@ -1,19 +1,19 @@
 (function() {
     "use strict";
-    var sequence = []; // array to hold sequence
-    var playerSequence = 0; // Count position in sequence player is testing
-    var playerGo = false; // Player's turn?
-    var computerGo = true; // Computer's turn?
-    var round = 0; // counter on display
-    var strict = false; // Strict game?
-    var startButton = document.getElementById("startButton");
-    var strictButton = document.getElementById("strictButton");
-    var buttons = document.querySelector(".pad");
-    var roundDisplay = document.getElementById("round");
-    var youWin = document.getElementById("youWin");
-    var yourTurn = document.getElementById("yourTurn");
-    var tryAgain = document.getElementById("tryAgain");
-    var strictError = document.getElementById("strictError");
+    let sequence = []; // array to hold sequence
+    let playerSequence = 0; // Count position in sequence player is testing
+    let playerGo = false; // Player's turn?
+    let computerGo = true; // Computer's turn?
+    let round = 0; // counter on display
+    let strict = false; // Strict game?
+    const startButton = document.getElementById("startButton");
+    const strictButton = document.getElementById("strictButton");
+    const buttons = document.querySelector(".pad");
+    const roundDisplay = document.getElementById("round");
+    const youWin = document.getElementById("youWin");
+    const yourTurn = document.getElementById("yourTurn");
+    const tryAgain = document.getElementById("tryAgain");
+    const strictError = document.getElementById("strictError");
 
     startButton.addEventListener("click", start);
 
@@ -41,8 +41,8 @@
 
     /* Simon show sequence */
     function activate(sequence) {
-        var i = 0;
-        var timing = setInterval(() => {
+        let i = 0;
+        let timing = setInterval(() => {
             lightButton(sequence[i]);
             i++;
             if (i >= sequence.length) {
@@ -55,8 +55,8 @@
     }
     /* Simon button activation */
     function lightButton(number) {
-        var sound = document.getElementById("tone" + number);
-        var button = document.getElementById("b" + number);
+        const sound = document.getElementById("tone" + number);
+        const button = document.getElementById("b" + number);
         sound.play();
         button.classList.remove("off");
         button.classList.add("on");
@@ -80,8 +80,8 @@
     /* Player button activation */
     function bleep(e) {
         if (playerGo) {
-            var number = Number(e.target.dataset.number);
-            var sound = document.getElementById("tone" + number);
+            const number = Number(e.target.dataset.number);
+            const sound = document.getElementById("tone" + number);
             sound.currentTime = 0;
             sound.play();
             buttons.removeEventListener("click", playersTurn);
