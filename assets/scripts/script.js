@@ -59,7 +59,7 @@
     let timing = setInterval(() => {
       lightButton(sequence[i]);
       i++;
-      if (i >= sequence.length) {
+      if (i === sequence.length) {
         clearInterval(timing);
         computerGo = false;
         playerGo = true;
