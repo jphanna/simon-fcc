@@ -51,7 +51,7 @@
   /**
    * Simon play sequence 
    * 
-   * @param {number} sequence
+   * @param {array object} sequence
    * 
    */
   function activate(sequence) {
@@ -88,7 +88,7 @@
   /**
    * Grab event during players turn
    * 
-   * @param {object} event 
+   * @param {event object} event 
    * 
    */
   function playersTurn(event) {
@@ -105,7 +105,7 @@
   /**
    * Activate button player clicked
    * 
-   * @param {object} e 
+   * @param {event object} e 
    * 
    */
   function bleep(e) {
