@@ -30,13 +30,13 @@
 
   /**
    * Simon chooses next number, add to sequence, runs the round
-   * 
+   *
    */
   function getSimon() {
     /**
      * If needed, add a zero to the game round display
-     * 
-     * @param {number} num 
+     *
+     * @param {number} num
      * @returns {string | number}
      */
     function addZero(num) {
@@ -49,10 +49,10 @@
   }
 
   /**
-   * Simon play sequence 
-   * 
+   * Simon play sequence
+   *
    * @param {array} sequence
-   * 
+   *
    */
   function activate(sequence) {
     let i = 0;
@@ -69,9 +69,9 @@
   }
   /**
    * Simon button activation
-   * 
+   *
    * @param {number} number
-   * 
+   *
    */
   function lightButton(number) {
     const sound = document.getElementById("tone" + number);
@@ -87,9 +87,9 @@
 
   /**
    * Grab event during players turn
-   * 
-   * @param {event} event 
-   * 
+   *
+   * @param {event} event
+   *
    */
   function playersTurn(event) {
     if (playerGo) {
@@ -104,9 +104,9 @@
 
   /**
    * Activate button player clicked
-   * 
-   * @param {event} e 
-   * 
+   *
+   * @param {event} e
+   *
    */
   function bleep(e) {
     if (playerGo) {
@@ -128,9 +128,9 @@
 
   /**
    * Test player sequence
-   * 
-   * @param {number} number 
-   * 
+   *
+   * @param {number} number
+   *
    */
   function testSeq(number) {
     if (number === sequence[playerSequence]) {
@@ -167,7 +167,7 @@
 
   /**
    * Initialize game
-   * 
+   *
    */
   function start() {
     sequence = [];
