@@ -19,14 +19,8 @@
 
   strictButton.addEventListener("click", () => {
     strict = !strict;
-    if (strict) {
-      strictButton.style.background = "#b71c1c";
-    } else {
-      strictButton.style.background = "#2c3e50";
-    }
+    (strict) ? strictButton.style.background = "#b71c1c" : strictButton.style.background = "#2c3e50";
   });
-
-  buttons.addEventListener("click", playersTurn);
 
   /**
    * Simon chooses next number, add to sequence, runs the round
@@ -42,6 +36,7 @@
     function addZero(num) {
       return (num < 10) ? "0" + num : num;
     }
+    buttons.removeEventListener("click", playersTurn);
     round++;
     roundDisplay.innerText = addZero(round);
     sequence.push(Math.floor(Math.random() * 4) + 1);
@@ -63,7 +58,7 @@
         clearInterval(timing);
         computerGo = false;
         playerGo = true;
-        setTimeout(() => {yourTurn.style.display = "initial";}, 700);
+        setTimeout(() => {yourTurn.style.display = "initial"; buttons.addEventListener("click", playersTurn);}, 700);
       }
     }, 700);
   }
@@ -156,11 +151,11 @@
         yourTurn.style.display = "none";
       } else {
         yourTurn.style.display = "none";
-        tryAgain.style.display = "initial";
         playerGo = false;
         computerGo = true;
         playerSequence = 0;
-        setTimeout(() => {tryAgain.style.display = "none"; activate(sequence);}, 2000);
+        tryAgain.style.display = "initial";
+        setTimeout(() => {tryAgain.style.display = "none"; yourTurn.style.display = "none"; activate(sequence);}, 2000);
       }
     }
   }
