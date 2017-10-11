@@ -136,6 +136,7 @@ button {
   text-transform: uppercase;
 }
 button:focus {
+  outline: 0;
   outline: none;
 }
 
