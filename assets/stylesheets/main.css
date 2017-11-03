@@ -58,7 +58,7 @@ table {
 }
 
 body {
-  background: #7BB6F0;
+  background: #4682b4;
 }
 
 .app {
@@ -172,42 +172,19 @@ small {
     width: 150px;
   }
 
-  #b1.off {
+  #b1 {
     border-radius: 100% 5px 0 5px;
-    margin: 0 1px 0 0;
+    margin: 0 1px 2px 0;
   }
-
-  #b1.on {
-    border-radius: 100% 5px 0 5px;
-    margin: 0 1px 0 0;
-  }
-
-  #b2.off {
+  #b2 {
     border-radius: 5px 100% 5px 0;
-    margin: 0 0 0 1px;
+    margin: 0 0 2px 1px;
   }
-
-  #b2.on {
-    border-radius: 5px 100% 5px 0;
-    margin: 0 0 0 1px;
-  }
-
-  #b3.off {
+  #b3 {
     border-radius: 5px 0 5px 100%;
     margin: 0 1px 0 0;
   }
-
-  #b3.on {
-    border-radius: 5px 0 5px 100%;
-    margin: 0 1px 0 0;
-  }
-
-  #b4.off {
-    border-radius: 0 5px 100% 5px;
-    margin: 0 0 0 1px;
-  }
-
-  #b4.on {
+  #b4 {
     border-radius: 0 5px 100% 5px;
     margin: 0 0 0 1px;
   }
@@ -227,7 +204,7 @@ small {
   }
 
   .message {
-    color: #333;
+    color: #fff;
     transform: translateY(-120px);
   }
 }
