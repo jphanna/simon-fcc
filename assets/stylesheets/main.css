@@ -204,7 +204,6 @@ small {
   }
 
   .message {
-    color: #fff;
     transform: translateY(-120px);
   }
 }
